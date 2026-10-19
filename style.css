@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #4c3024;
+    background:
+        radial-gradient(ellipse at top, #c9a780, transparent 65%),
+        linear-gradient(135deg, #39251c, #886346, #4a3023);
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
+}
+
+.lock-card {
+    padding: 38px 24px;
+    background: #f8edd8;
+    border: 2px solid #c7a679;
+    box-shadow: 0 18px 55px #1d100b66;
+}
+
+.seal {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #75402e;
+    color: #ffebcd;
+    font-size: 30px;
+    box-shadow: 0 5px 12px #42291c55;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: clamp(32px, 7vw, 48px);
+}
+
+.intro {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.question {
+    margin: 25px 0 16px;
+    padding: 18px 12px;
+    border-top: 1px solid #c6a780;
+    border-bottom: 1px solid #c6a780;
+    font-size: clamp(20px, 5vw, 27px);
+    font-weight: 600;
+    font-style: italic;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #aa8660;
+    background: #fffaf0;
+    color: #4c3024;
+    font: 17px Georgia, serif;
+    text-align: center;
+    outline-color: #754b35;
+}
+
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+    border: none;
+    background: #69442f;
+    color: #fff1dc;
+    font: 17px Georgia, serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #875d40;
+    transform: translateY(-2px);
+}
+
+.message {
+    min-height: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #9a4435;
+}
+
+.small-note {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.light {
+    color: #fff0d9;
+}
+
+.scroll-stage {
+    perspective: 1000px;
+    margin-top: 22px;
+}
+
+.paper {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-85deg);
+    background:
+        radial-gradient(ellipse at center, #fff4d9, transparent 90%),
+        repeating-linear-gradient(
+            0deg,
+            #f2e3c2,
+            #f2e3c2 3px,
+            #eddbb6 4px,
+            #eddbb6 6px
+        );
+    border: 1px solid #c5a174;
+    box-shadow: 0 15px 40px #1d100b66;
+}
+
+.paper.open {
+    animation: unroll 2s ease forwards;
+}
+
+.paper-inner {
+    padding: 28px clamp(18px, 6vw, 48px);
+    text-align: left;
+}
+
+.top-decoration {
+    text-align: center;
+    font-size: 35px;
+    color: #916a45;
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 19px;
+    line-height: 1.85;
+}
+
+.letter-text strong {
+    font-weight: 700;
+    color: #633c2a;
+}
+
+.letter-text em {
+    font-style: italic;
+}
+
+.hearts {
+    text-align: center;
+    font-size: 36px;
+    padding: 25px 0 5px;
+    animation: heartbeat 1s infinite;
+}
+
+.bottom-note {
+    color: #ffedd7;
+    font-style: italic;
+    margin-top: 22px;
+}
+
+@keyframes unroll {
+    0% {
+        max-height: 0;
+        opacity: 0;
+        transform: rotateX(-85deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        max-height: 12000px;
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 480px) {
+    .lock-card {
+        padding: 28px 18px;
+    }
+
+    .letter-text {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Letter for Srii 🤎</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+
+        <section id="lockScreen" class="lock-card">
+            <div class="seal">✉</div>
+            <p class="eyebrow">A LITTLE SECRET FOR YOU</p>
+            <h1>Hey, You! 🤎</h1>
+            <p class="intro">
+                Oru chinna surprise irukku...
+                but first, answer this! 🤭
+            </p>
+
+            <div class="question">
+                Naan unna eppadi koopduven??! 🥹💗
+            </div>
+
+            <form id="passwordForm">
+                <input
+                    id="passwordInput"
+                    type="password"
+                    placeholder="Type your answer here..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Open my little surprise 💌</button>
+            </form>
+
+            <p id="message" class="message" aria-live="polite"></p>
+            <p class="small-note">Think carefully, mister! 🤭</p>
+        </section>
+
+        <section id="letterScreen" class="hidden">
+            <p class="eyebrow light">A LITTLE LETTER FOR YOU</p>
+
+            <div class="scroll-stage">
+                <div id="paper" class="paper">
+                    <div class="paper-inner">
+                        <div class="top-decoration">❦</div>
+                        <div id="letterText" class="letter-text"></div>
+                        <div id="hearts" class="hearts hidden">
+                            🤎 💗 🤎
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="bottom-note">
+                Made with all my little feelings. ♡
+            </p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
